@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #3498db, #2c3e50) fixed;
+    color: white;
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+}
+
+.todo-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    max-width: 600px; /* Added max-width for responsiveness */
+    width: 80%; /* Added width for responsiveness */
+    margin: 0 auto; /* Center the container */
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Adjust styles for task sections */
+.task-sections {
+    display: flex;
+    flex-direction: column; /* Stack sections on smaller screens */
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px; /* Added margin for separation on smaller screens */
+}
+
+.task-sections ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-sections li {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Adjust styles for delete and done buttons */
+.delete-btn, .done-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.done-btn {
+    background-color: #27ae60;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .todo-container {
+        width: 90%;
+    }
+}
